@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= cv.name %> - <%= cv.title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="cv-container">
+        
+        <div class="left-column">
+            <header class="cv-header">
+                <img src="/images/my-photo.jpg" alt="Ảnh đại diện" class="cv-avatar">
+                <h1><%= cv.name %></h1>
+                <h2><%= cv.title %></h2>
+                <p><%= cv.summary %></p>
+            </header>
+
+            <section class="cv-contact">
+                <h3>Thông tin liên hệ</h3>
+                <ul>
+                    <li>Email: <%= cv.contacts.email %></li>
+                    <li>Điện thoại: <%= cv.contacts.phone %></li>
+                    <li>Địa chỉ: <%= cv.contacts.location %></li>
+                </ul>
+            </section>
+
+            <section class="cv-section">
+                <h3>Kỹ năng</h3>
+                <ul>
+                    <% cv.skills.forEach(skill => { %>
+                        <li><%= skill %></li>
+                    <% }); %>
+                </ul>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section class="cv-section">
+                <h3>Kinh nghiệm làm việc</h3>
+                <% cv.experiences.forEach(exp => { %>
+                    <div class="experience-item">
+                        <h4><%= exp.role %> tại <%= exp.company %></h4>
+                        <span class="period"><%= exp.period %></span>
+                        <p><%= exp.desc %></p>
+                    </div>
+                <% }); %>
+            </section>
+
+            <section class="cv-section">
+                <h3>Học vấn</h3>
+                <% cv.education.forEach(edu => { %>
+                    <div class="education-item">
+                        <h4><%= edu.degree %></h4>
+                        <p><%= edu.school %> (<%= edu.period %>)</p>
+                    </div>
+                <% }); %>
+            </section>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* Bố cục 2 cột */
+.cv-container {
+    display: flex; /* Sử dụng Flexbox để tạo bố cục */
+    max-width: 900px; /* Tăng chiều rộng để dễ dàng sắp xếp */
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Giữ các góc bo tròn */
+}
+
+.left-column {
+    background-color: #3f51b5; /* Màu nền cho cột trái */
+    color: #fff;
+    padding: 30px;
+    width: 35%;
+}
+
+.right-column {
+    background-color: #fff;
+    padding: 30px;
+    width: 65%;
+}
+/* Thêm transition cho các hiệu ứng hover */
+h3 {
+    transition: color 0.3s ease;
+}
+
+h3:hover {
+    color: #4a69bd; /* Màu đậm hơn khi hover */
+}
+
+/* Thêm hiệu ứng box-shadow cho các mục kinh nghiệm */
+.experience-item, .education-item {
+    padding: 15px;
+    border-left: 3px solid #3f51b5; /* Thêm đường kẻ bên trái */
+    background-color: #fafafa;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Tinh chỉnh lại các heading trong cột trái */
+.left-column h1, .left-column h2, .left-column h3, .left-column p {
+    color: #fff;
+    border-bottom-color: rgba(255,255,255,0.3); /* Đường kẻ mờ hơn */
+}
+    /* .cv-avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px auto;
+        border: 5px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    } */
+/* Trong file public/css/style.css, tìm .cv-avatar và chỉnh sửa */
+.cv-avatar {
+    width: 160px; /* Tăng kích thước ảnh một chút */
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 25px auto; /* Tăng khoảng cách dưới ảnh */
+    
+    /* Viền ảnh mới */
+    border: 6px solid rgba(255, 255, 255, 0.7); /* Viền màu trắng hơi trong suốt */
+    box-shadow: 0 0 0 3px #bbdefb, /* Viền ngoài màu xanh nhạt */
+                0 0 15px rgba(0, 0, 0, 0.3); /* Đổ bóng sâu hơn */
+    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Hiệu ứng khi di chuột vào ảnh */
+.cv-avatar:hover {
+    transform: scale(1.05); /* Phóng to ảnh một chút khi hover */
+    box-shadow: 0 0 0 5px #90caf9, /* Viền ngoài rõ hơn */
+                0 0 20px rgba(0, 0, 0, 0.4); /* Đổ bóng mạnh hơn */
+}
+/* Trong file public/css/style.css, thêm hoặc chỉnh sửa .cv-avatar */
+.cv-avatar {
+    /* ... các thuộc tính khác như trên ... */
+    filter: brightness(1.05) contrast(1.05); /* Tăng độ sáng và tương phản nhẹ cho ảnh */
+    /* Nếu muốn hiệu ứng glow nhẹ */
+    /* box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3), 0 0 0 3px #bbdefb; */
+}
+.cv-header {
+    text-align: center;
+    padding-top: 20px; /* Thêm padding trên để ảnh không quá sát mép */
+    margin-bottom: 30px;
+}
+/* Trong file public/css/style.css, tìm .right-column và chỉnh sửa */
+.right-column {
+    background-color: #f8f9fa; /* Màu nền xám nhạt */
+    padding: 30px;
+    width: 65%;
+}
+/* Trong file public/css/style.css, tìm .experience-item, .education-item và chỉnh sửa */
+.experience-item, .education-item {
+    padding: 20px;
+    border-left: 5px solid #64b5f6; /* Đổi màu viền bên trái sang màu xanh dương nhạt */
+    background-color: #fff; /* Nền trắng cho các khối nội dung */
+    border-radius: 8px; /* Bo góc nhẹ */
+    margin-bottom: 25px; /* Tăng khoảng cách giữa các khối */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* Đổ bóng nhẹ để tạo chiều sâu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Thêm hiệu ứng khi di chuột vào từng mục */
+.experience-item:hover, .education-item:hover {
+    transform: translateY(-5px); /* Di chuyển khối lên một chút khi hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12); /* Đổ bóng rõ hơn */
+}
+/* Trong file public/css/style.css, tìm .cv-section h3 và chỉnh sửa */
+.cv-section h3 {
+    font-size: 1.6rem;
+    color: #1a237e; /* Màu xanh đậm để nổi bật */
+    border-bottom: 2px solid #64b5f6; /* Đổi màu đường kẻ dưới */
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
